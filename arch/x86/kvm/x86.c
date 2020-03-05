@@ -1660,7 +1660,7 @@ static void update_pvclock_gtod(struct timekeeper *tk)
 
 static s64 get_kvmclock_base_ns(void)
 {
-	/* Count up from boot time, but with the frequency of the raw clock.  */
+	/* Count up from boot time, but with the frequency of raw clock.  */
 	return ktime_to_ns(ktime_add(ktime_get_raw(), pvclock_gtod_data.offs_boot));
 }
 #else
