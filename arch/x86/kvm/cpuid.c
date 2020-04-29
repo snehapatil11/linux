@@ -1082,7 +1082,7 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	if(eax == 0x4fffffff){
 
 		eax=atomic_read(&num_exits);
-		//printk("\r\nExit count 2nd phase : %u\r\n", num_exits);
+		printk("\r\nTotal Exit count : %x\r\n", num_exits);
 	}
 	else if(eax == 0x4ffffffe) {
 		u64 total_time = 0;
